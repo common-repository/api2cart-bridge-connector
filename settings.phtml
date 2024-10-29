@@ -1,0 +1,49 @@
+<div class="bridge">
+  <div class="bridge--connectormessage"></div>
+
+
+  <div class="bridge--container">
+
+    <div class="text-center">
+      <p id="connector-installed-txt">The connector will be installed automatically. Just click the button below and have the connection between your <?php echo $cartName; ?> store and the system needed established.</p>
+      <div id="content-block-manage">
+        <b>Congratulations! The plugin is installed!</b>
+
+        <b>Please note.</b> Store data interaction works if you are integrated with the service only.
+        It enables to retrieve, synchronize, and manipulate various information on products, categories, customers, and orders from the stores added to the store directory. For more information, schedule a call with our representative and have it all explained to you.
+        <br>
+      </div>
+    </div>
+
+    <div class="text-center">
+
+      <div class="progress progress-dark progress-small progress-striped active">
+        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+      <div class="store-key">
+        <span class="store-key-title">Your store key:</span>
+        <span class="store-key-content" id="storeKey"><?php esc_html_e($storeKey); ?></span>
+        <button id="updateBridgeStoreKey" class="btn-update-store-key">Update Store Key</button>
+      </div>
+
+      <button id="bridgeConnectionUninstall" class="btn-disconnect btn-setup">Disconnect</button>
+      <button id="bridgeConnectionInstall" class="btn-connect btn-setup">Connect</button>
+
+    </div>
+
+    <input type="hidden" id="showButton" value="<?php esc_html_e($showButton); ?>">
+    <div id="additionalInfo" style="display: <?php if ($isCustom) {echo 'block';} else {echo 'none';} ?>">
+      <table>
+        <tr>
+          <td><b>Bridge Url:</b></td><td id="bridgeUrlVal"><?php esc_html_e($bridgeUrl); ?></td>
+        </tr>
+        <tr>
+          <td><b>Bridge Version:</b></td><td id="bridgeVersionVal"><?php esc_html_e($bridgeVersion); ?></td>
+        </tr>
+      </table>
+    </div>
+    <div class="bridge--clearfix"></div>
+  </div>
+
+</div>
